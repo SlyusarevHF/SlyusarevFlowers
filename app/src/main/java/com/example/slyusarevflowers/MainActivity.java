@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<List<Flowers>>() {
                          @Override
                          public void onResponse(Call<List<Flowers>> call, Response<List<Flowers>> response) {
-                             // response.isSuccessfull() возвращает true если код ответа 2xx
                              if (response.isSuccessful()) {
                                  mFlowers.addAll(response.body());
                                  mRecyclerView.getAdapter().notifyDataSetChanged();
